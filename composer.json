@@ -1,0 +1,44 @@
+{
+	"name": "ommu/dora",
+	"description": "Dora - Coming Soon Template",
+	"keywords": [
+		"theme",
+		"frontend",
+		"onepage",
+		"coming soon",
+		"maintenance",
+		"ommu",
+		"platform",
+		"ommu platform"
+	],
+	"homepage": "https://github.com/OmmuThemes/dora",
+	"type": "ommu-theme",
+	"license": "Apache-2.0",
+	"support": {
+		"issues": "https://github.com/OmmuThemes/dora/issues",
+		"wiki": "https://github.com/OmmuThemes/dora/wiki",
+		"source": "https://github.com/OmmuThemes/dora"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/OmmuThemes/dora.git"
+	},
+	"authors": [
+		{
+			"name": "Putra Sudaryanto",
+			"email": "putra@sudaryanto.id",
+			"homepage": "https://putra.sudaryanto.id",
+			"role": "Developer"
+		},
+		{
+			"name": "devob",
+			"homepage": "https://themeforest.net/user/devob",
+			"role": "Creator"
+		}
+	],
+	"require": {
+		"php": ">=5.3.2",
+		"oomphinc/composer-installers-extender": "^1.0",
+		"yiisoft/yii": "1.1.*"
+	}
+}
