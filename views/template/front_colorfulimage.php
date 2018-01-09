@@ -16,7 +16,7 @@
 	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
 	$cs = Yii::app()->getClientScript();
 	$cs->registerCssFile(Yii::app()->theme->baseUrl.'/css/colorfulimage/style.css');
-	$cs->registerScriptFile(Yii::app()->theme->baseUrl.'/js/custom/colorfulimag.js', CClientScript::POS_END);
+	$cs->registerScriptFile(Yii::app()->theme->baseUrl.'/js/custom/colorfulimage.js', CClientScript::POS_END);
 ?>
 
 <section class="bg-page section">
