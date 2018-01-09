@@ -1,6 +1,6 @@
 <?php
 /**
- * @var $this ContentFaqs
+ * @var $this ContentPortfolio
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
