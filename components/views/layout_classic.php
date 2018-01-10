@@ -23,10 +23,10 @@
 		<div class="inner">
 			<h2>Coming Soon</h2>
 			<!-- Type here opening date -->
-			<input type="hidden" id="countDownDate" name="countDownDate" value="15 Sep, 2018 12:00:00" expireword="Welcome">
+			<input type="hidden" id="countDownDate" name="countDownDate" value="<?php echo $this->construction_date;?>" expireword="Welcome">
 			<div class="timer">
 				<h1 id="timer"></h1></div>
-			<p>We are working hard on our new site. Follow the news updates and you'll be the first to know when it's ready.</p>
+			<p><?php echo $this->construction_text['comingsoon'];?></p>
 			<form class="notify-area" action="javascript:void(0)" autocomplete="off" method="post">
 				<input type="text" name="email" id="email" value="" placeholder="E-mail">
 				<button type="button" data-title="Notify Me" class="notify">Notify Me</button>

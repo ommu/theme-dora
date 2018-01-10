@@ -11,7 +11,12 @@
 
 class LayoutClassic extends CWidget
 {
+	public $construction_date;
+	public $construction_text;
+
 	public function init() {
+		if(!$this->construction_date)
+			$this->construction_date = '15 Sep, 2018 12:00:00';
 	}
 
 	public function run() {
