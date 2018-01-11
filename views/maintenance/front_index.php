@@ -25,12 +25,12 @@
 		'folder'=>Yii::app()->theme->name,
 	));
 	$configTheme = unserialize($model->config);
-	if($model != null && !empty($configTheme))
+	if($model != null && is_array($configTheme) && !empty($configTheme))
 		$condition = 1;
 ?>
 
 <?php 
-$template = 'LayoutGalaxy';
+$layout = 'LayoutGalaxy';
 if($condition == 1) {
 	if($configTheme['template'] == 'galaxy')
 		$layout = 'LayoutGalaxy';
@@ -55,8 +55,8 @@ $this->widget($layout, array(
 	'construction_text' => $construction_text['maintenance'],
 )); //Layout Galaxy ?>
 
-<?php if($condition == 1 && $configTheme['portfolio'] == 1)
+<?php if(!$condition || $configTheme['portfolio'] == 1)
 	$this->widget('ContentPortfolio'); //Portfolio ?>
 
-<?php if($condition == 1 && $configTheme['contact-us'] == 1)
+<?php if(!$condition || $configTheme['contact-us'] == 1)
 	$this->widget('ContentContactUs'); //Contact ?>
