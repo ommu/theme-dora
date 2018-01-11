@@ -30,7 +30,7 @@
 			<input type="hidden" id="countDownDate" name="countDownDate" value="<?php echo $this->construction_date;?>" expireword="Welcome">
 			<div class="timer">
 				<h1 id="timer"></h1></div>
-			<p><?php echo $this->construction_text['comingsoon'];?></p>
+			<p><?php echo $this->construction_text;?></p>
 			<form class="notify-area" action="javascript:void(0)" autocomplete="off" method="post">
 				<input type="text" name="email" id="email" value="" placeholder="E-mail">
 				<button type="button" data-title="Notify Me" class="notify ripplelink">Notify Me</button>

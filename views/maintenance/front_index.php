@@ -1,7 +1,7 @@
 <?php
 /**
  * Ommu Settings (ommu-settings)
- * @var $this ComingsoonController
+ * @var $this MaintenanceController
  * @var $model OmmuSettings
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
@@ -12,10 +12,10 @@
  */
  
 	$this->breadcrumbs=array(
-		'Coming Soon',
+		'Maintenance',
 	);
 
-	$this->pageTitle = Yii::t('phrase', 'Coming Soon');
+	$this->pageTitle = Yii::t('phrase', 'Maintenance');
 	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
 
 	$condition = 0;
@@ -52,7 +52,7 @@ if($condition == 1) {
 $construction_text = unserialize($setting->construction_text);
 $this->widget($layout, array(
 	'construction_date' => date('j M, Y H:i:s', strtotime($setting->construction_date)),
-	'construction_text' => $construction_text['comingsoon'],
+	'construction_text' => $construction_text['maintenance'],
 )); //Layout Galaxy ?>
 
 <?php if($condition == 1 && $configTheme['portfolio'] == 1)
