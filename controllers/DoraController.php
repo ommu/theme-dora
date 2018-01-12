@@ -47,7 +47,7 @@ class DoraController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$this->pageTitle = Yii::t('phrase', 'Dora. - Coming Soon Page Template');
+		$this->pageTitle = Yii::t('phrase', 'Main | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
 		$this->render('front_index');
