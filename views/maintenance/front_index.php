@@ -31,22 +31,22 @@
 
 <?php 
 $layout = 'LayoutGalaxy';
-if($condition == 1) {
-	if($configTheme['template'] == 'galaxy')
+if($condition) {
+	if($configTheme['template']['option'] == 'galaxy')
 		$layout = 'LayoutGalaxy';
-	else if($configTheme['template'] == 'island')
+	else if($configTheme['template']['option'] == 'island')
 		$layout = 'LayoutIsland';
-	else if($configTheme['template'] == 'pattern')
+	else if($configTheme['template']['option'] == 'pattern')
 		$layout = 'LayoutPattern';
-	else if($configTheme['template'] == 'classic')
+	else if($configTheme['template']['option'] == 'classic')
 		$layout = 'LayoutClassic';
-	else if($configTheme['template'] == 'image')
+	else if($configTheme['template']['option'] == 'image')
 		$layout = 'LayoutImage';
-	else if($configTheme['template'] == 'colorfulimage')
+	else if($configTheme['template']['option'] == 'colorfulimage')
 		$layout = 'LayoutColorfulimage';
-	else if($configTheme['template'] == 'particle')
+	else if($configTheme['template']['option'] == 'particle')
 		$layout = 'LayoutParticle';
-	else if($configTheme['template'] == 'stars')
+	else if($configTheme['template']['option'] == 'stars')
 		$layout = 'LayoutStars';
 }
 $construction_text = unserialize($setting->construction_text);
@@ -55,8 +55,15 @@ $this->widget($layout, array(
 	'construction_text' => $construction_text['maintenance'],
 )); //Layout Galaxy ?>
 
-<?php if(!$condition || $configTheme['portfolio'] == 1)
-	$this->widget('ContentPortfolio'); //Portfolio ?>
+<?php if(!$condition || $configTheme['portfolio']['publish'] == 1) {
+	$this->widget('ContentPortfolio', array(
+		'title' => $configTheme['portfolio']['title'],
+	));
+} //Portfolio ?>
 
-<?php if(!$condition || $configTheme['contact-us'] == 1)
-	$this->widget('ContentContactUs'); //Contact ?>
+<?php if(!$condition || $configTheme['contact-us']['publish'] == 1) {
+	$this->widget('ContentContactUs', array(
+		'title' => $configTheme['contact-us']['title'],
+		'desc' => $configTheme['contact-us']['desc'],
+	)); 
+} //Contact ?>

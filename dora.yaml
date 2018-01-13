@@ -25,12 +25,11 @@ config:
 
   portfolio:
     label: Portfolio
-    option:
-      0: "No"
-      1: "Yes"
+    title: Portfolio
+    publish: 1
 
   contact-us:
     label: Contact Us
-    option:
-      0: "No"
-      1: "Yes"
+    title: Contact
+    desc: You can contact us via email! We are ready to discuss cooperation and to listen to job offers!
+    publish: 1

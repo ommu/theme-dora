@@ -13,7 +13,7 @@
 <!-- Portfolio -->
 <section class="portfolio section">
 	<div class="container">
-		<h1>Portfolio</h1>
+		<h1><?php echo $this->title;?></h1>
 		<div id="portfolio" class="owl-carousel owl-theme">
 			<div class="portfolio-col">
 				<!-- item 1 -->

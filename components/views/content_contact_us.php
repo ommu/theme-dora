@@ -13,8 +13,8 @@
 <!-- Contact -->
 <section class="contact section">
     <div class="container">
-        <h1>Contact</h1>
-        <p class="description">You can contact us via email! We are ready to discuss cooperation and to listen to job offers!</p>
+        <h1><?php echo $this->title;?></h1>
+        <p class="description"><?php echo $this->desc;?></p>
         <form class="contact-form" id="contact-form" method="post" action="javascript:void(0);">
             <div id="success"></div>
             <div class="name field">

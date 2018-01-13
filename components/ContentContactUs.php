@@ -11,7 +11,14 @@
 
 class ContentContactUs extends CWidget
 {
+	public $title;
+	public $desc;
+
 	public function init() {
+		if(!$this->title)
+			$this->title = Yii::t('phrase', 'Contact Us');
+		if(!$this->desc)
+			$this->desc = Yii::t('phrase', 'You can contact us via email! We are ready to discuss cooperation and to listen to job offers!');
 	}
 
 	public function run() {

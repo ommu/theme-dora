@@ -11,7 +11,11 @@
 
 class ContentPortfolio extends CWidget
 {
+	public $title;
+
 	public function init() {
+		if(!$this->title)
+			$this->title = Yii::t('phrase', 'Portfolio');
 	}
 
 	public function run() {
