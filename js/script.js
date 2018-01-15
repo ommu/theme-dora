@@ -3,6 +3,54 @@
 	Dora - Coming Soon Template SCRIPT JS
 |--------------------------------------------------------------------------
 */
+
+//check whether submit button save is click, prevent double post save
+var isEnableSave = 0;
+
+//button save click
+function setEnableSave() {
+	isEnableSave = 1;
+}
+
+/**
+ * form function
+ */
+//count total json (obj)
+function countProperties(obj) {
+	var prop;
+	var propCount = 0;
+
+	$.each(obj, function (index, value) {
+		propCount++;
+	});
+	
+	return propCount;
+}
+
+//find existed string
+function strpos (haystack, needle) {
+	var i = (haystack+'').indexOf(needle, 0);
+	return i === -1 ? false : i;
+}
+
+//clear input
+function clearInput(form) {
+	$(form).find(':input').each(function() {
+		switch(this.type) {
+			case 'password':
+			case 'select-multiple':
+			case 'select-one':
+			case 'text':
+			case 'textarea':
+				$(this).val('');
+				break;
+			case 'checkbox':
+			case 'radio':
+				this.checked = false;
+		}
+	});
+}
+
 $(document).ready(function() {
 
 	"use strict";
@@ -257,11 +305,64 @@ $(document).ready(function() {
 	|--------------------------------------------------------------------------
 	*/
 
-	$("#contact-button").on('click', function() {
-		$.post("contact.php", $("#contact-form").serialize(), function(response) {
-			$("#success").fadeIn(300).html(response);
-			$("#success").delay(3000).fadeOut(300);
-		});
+	// Dialog and General Function Form
+	$('form').submit(function(event) {
+		$(this).find('input[type="submit"]').addClass('active');
+		var attrSave = '?&enablesave=' + isEnableSave;
+		//var attrSave = '/enablesave/' + isEnableSave;
+		var method  = $(this).attr('method');
+		var url     = $(this).attr('action') + attrSave;
+		var link     = $(this).attr('action');
+
+		if(method != 'get') {
+			var options = {
+				type: 'GET',
+				dataType: 'json',
+				//data: { enablesave: isEnableSave },
+				success: function(response) {
+					var hasError = 0;
+					if(countProperties(response) > 0) {
+						$.each(response, function (index, value) {
+							if(strpos(index,'_')) {
+								hasError = 1;
+							}
+						});
+						if(hasError == 1) {
+							$('form[action="'+link+'"]').find('input[type="submit"]').removeClass('active');
+
+							$('form[action="'+link+'"]').find('div.errorMessage').hide().html('');
+							$('form[action="'+link+'"]').find('textarea').removeClass('error');
+							$('form[action="'+link+'"]').find('input').removeClass('error');
+							$.each(response, function (index, value) {
+								$('form[action="'+link+'"]').find('div#ajax-message').html(response.msg);
+								$('form[action="'+link+'"] #' + index ).addClass('error');
+								$('form[action="'+link+'"] #' + index + '_em_').show().html(value);
+							});
+
+						} else {
+							$('form[action="'+link+'"]').find('input[type="submit"]').removeClass('active');
+
+							$('form[action="'+link+'"]').find('div.errorMessage').hide().html('');
+							$('form[action="'+link+'"]').find('textarea').removeClass('error');
+							$('form[action="'+link+'"]').find('input').removeClass('error');
+							
+							if(response.type == 'contact') {
+								$("#success").fadeIn(300).html(response.msg);
+								$("#success").delay(3000).fadeOut(300);
+								clearInput('form[action="'+link+'"]');
+							}
+						}
+					}
+				}
+			}
+			
+			if(method == 'post') {
+				options.data = $(this).serialize();
+				options.type = 'POST';
+			}
+			$.ajax(url, options);
+			event.preventDefault();
+		}
 	});
 
 

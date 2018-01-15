@@ -14,7 +14,10 @@ class ContentContactUs extends CWidget
 	public $title;
 	public $desc;
 
-	public function init() {
+	public function init() 
+	{
+		Yii::import('ommu.support.models.*');
+
 		if(!$this->title)
 			$this->title = Yii::t('phrase', 'Contact Us');
 		if(!$this->desc)
@@ -33,7 +36,10 @@ class ContentContactUs extends CWidget
 		$currentModule = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id);
 		$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
 
+		$model=new SupportFeedbacks;
+
 		$this->render('content_contact_us',array(
+			'model'=>$model,
 			'module'=>$module,
 			'controller'=>$controller,
 			'action'=>$action,

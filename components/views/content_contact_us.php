@@ -15,23 +15,38 @@
     <div class="container">
         <h1><?php echo $this->title;?></h1>
         <p class="description"><?php echo $this->desc;?></p>
-        <form class="contact-form" id="contact-form" method="post" action="javascript:void(0);">
+		<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
+				'id'=>'contact-form',
+				'action' => Yii::app()->createUrl('dora/feedback'),
+				'enableAjaxValidation'=>true,
+				'htmlOptions' => array(
+					'class' => 'contact-form',
+				),
+			)); ?>
             <div id="success"></div>
             <div class="name field">
-                <label for="name">Name</label>
-                <input type="text" name="name">
+				<?php echo $form->labelEx($model,'displayname'); ?>
+				<?php echo $form->textField($model,'displayname',array('maxlength'=>32)); ?>
+				<?php echo $form->error($model,'displayname'); ?>
             </div>
             <div class="email field">
-                <label for="email">Email</label>
-                <input type="text" name="email">
+				<?php echo $form->labelEx($model,'email'); ?>
+				<?php echo $form->textField($model,'email',array('maxlength'=>32)); ?>
+				<?php echo $form->error($model,'email'); ?>
             </div>
             <div class="clearfix"></div>
             <div class="message field">
-                <label for="message">Message</label>
-                <textarea name="message" rows="10" cols="25"></textarea>
+				<?php echo $form->labelEx($model,'subject'); ?>
+				<?php echo $form->textField($model,'subject',array('maxlength'=>64)); ?>
+				<?php echo $form->error($model,'subject'); ?>
             </div>
-            <button type="submit" id="contact-button" class="btn primary submit ripplelink">Send</button>
+            <div class="message field">
+				<?php echo $form->labelEx($model,'message'); ?>
+				<?php echo $form->textArea($model,'message',array('rows'=>10, 'cols'=>25)); ?>
+				<?php echo $form->error($model,'message'); ?>
+            </div>
+			<?php echo CHtml::submitButton(Yii::t('phrase', 'Send'), array('id'=>'contact-button', 'class'=>'btn primary submit ripplelink', 'onclick' => 'setEnableSave()')); ?>
             <div class="clearfix"></div>
-        </form>
+		<?php $this->endWidget(); ?>
     </div>
 </section>

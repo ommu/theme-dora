@@ -36,7 +36,7 @@ class DoraController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index'),
+				'actions'=>array('index','feedback'),
 				'users'=>array('*'),
 			),
 		);
@@ -51,5 +51,53 @@ class DoraController extends Controller
 		$this->pageDescription = '';
 		$this->pageMeta = '';
 		$this->render('front_index');
+	}
+	
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionFeedback() 
+	{
+		$model=new SupportFeedbacks;
+
+		// Uncomment the following line if AJAX validation is needed
+		$this->performAjaxValidation($model);
+
+		if(isset($_POST['SupportFeedbacks'])) {
+			$model->attributes=$_POST['SupportFeedbacks'];
+
+			$jsonError = CActiveForm::validate($model);
+			if(strlen($jsonError) > 2) {
+				echo $jsonError;
+				
+			} else {
+				if(isset($_GET['enablesave']) && $_GET['enablesave'] == 1) {
+					if($model->save()) {
+						echo CJSON::encode(array (
+							'type' => 'contact',
+							'msg' => Yii::t('phrase', 'Your email was sent!'),
+						));
+					} else
+						print_r($model->getErrors());
+				}
+			}
+			Yii::app()->end();
+			
+		} else
+			$this->redirect(Yii::app()->createUrl('site/index'));
+	}
+
+	/**
+	 * Performs the AJAX validation.
+	 * @param CModel the model to be validated
+	 */
+	protected function performAjaxValidation($model) 
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='contact-form') {
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
 	}
 }

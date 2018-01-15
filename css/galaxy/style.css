@@ -339,6 +339,13 @@ section {
   height: 72px;
   padding: 16px 0px 8px 0px;
 }
+.field .errorMessage {
+	text-align: left;
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 17px;
+	color: #ff0000;
+}
 .field::after, .field::before {
   content:'';
   position: absolute;
@@ -377,7 +384,7 @@ section {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-.contact .contact-form input,
+.contact .contact-form input[type="text"],
 .contact .contact-form textarea {
   position: relative;
   display: block;
