@@ -29,15 +29,6 @@ $(document).ready(function() {
 			var email = $("#email");
 			if (isEmail(email.val()) == 0) {
 				$(".notify-area").effect("shake");
-			} else {
-				//Type here when email is correct
-				notify.html("<i class='ion-checkmark-round'></i>").css("background", "#F26101");
-				setTimeout(function() {
-					notify.removeClass("active").text("Notify Me").css("background", "#F26101");
-					$(".notify-area input").removeClass("active");
-					$("#email").val('');
-
-				}, 1500);
 			}
 		} else {
 			$(".notify-area input").addClass("active");

@@ -27,10 +27,17 @@
 			<div class="timer">
 				<h1 id="timer"></h1></div>
 			<p><?php echo $this->construction_text;?></p>
-			<form class="notify-area" action="javascript:void(0)" autocomplete="off" method="post">
-				<input type="text" name="email" id="email" value="" placeholder="E-mail">
-				<button type="button" data-title="Notify Me" class="notify ripplelink">Notify Me</button>
-			</form>
+			<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
+				'id'=>'notify-area',
+				'action' => Yii::app()->createUrl('dora/newsletter', array('layout'=>'pattern')),
+				'enableAjaxValidation'=>true,
+				'htmlOptions' => array(
+					'class' => 'notify-area',
+				),
+			)); ?>
+				<?php echo $form->textField($model,'email_i',array('maxlength'=>32, 'id'=>'email', 'placeholder'=>'E-mail')); ?>
+				<?php echo CHtml::tag('button', array('data-title'=>'Notify Me', 'class'=>'notify ripplelink', 'onclick' => 'setEnableSave()'), Yii::t('phrase', 'Notify Me')); ?>
+			<?php $this->endWidget(); ?>
 		</div>
 	</div>
 	<div class="arrow">

@@ -32,6 +32,7 @@ class LayoutStars extends CWidget
 		$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
 
 		$this->render('layout_stars',array(
+			'model'=>$model,
 			'module'=>$module,
 			'controller'=>$controller,
 			'action'=>$action,

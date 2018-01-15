@@ -350,6 +350,46 @@ $(document).ready(function() {
 								$("#success").fadeIn(300).html(response.msg);
 								$("#success").delay(3000).fadeOut(300);
 								clearInput('form[action="'+link+'"]');
+
+							} else if(response.type == 'newsletter') {
+								var notify = $(".notify");
+								if(response.layout == 'galaxy') {
+									//Type here when email is correct
+									notify.html("<i class='ion-checkmark-round'></i>").css("background", "#7dc139");
+									setTimeout(function() {
+										notify.removeClass("active").text("Notify Me").css("background", "#E91E63");
+										$(".notify-area input").removeClass("active");
+										$("#email").val('');
+					
+									}, 1500);
+								} else if(response.layout == 'island') {
+									//Type here when email is correct
+									notify.html("<i class='ion-checkmark-round'></i>").css("background", "#aac90c");
+									setTimeout(function() {
+										notify.removeClass("active").text("Notify Me").css("background", "#9a3a3e");
+										$(".notify-area input").removeClass("active");
+										$("#email").val('');
+					
+									}, 1500);
+								} else if(response.layout == 'classic') {
+									//Type here when email is correct
+									notify.html("<i class='ion-checkmark-round'></i>").css("background", "#F26101");
+									setTimeout(function() {
+										notify.removeClass("active").text("Notify Me").css("background", "#F26101");
+										$(".notify-area input").removeClass("active");
+										$("#email").val('');
+					
+									}, 1500);
+								} else {
+									//Type here when email is correct
+									notify.html("<i class='ion-checkmark-round'></i>").css("background", "#7dc139");
+									setTimeout(function() {
+										notify.removeClass("active").text("Notify Me").css("background", "#E91E63");
+										$(".notify-area input").removeClass("active");
+										$("#email").val('');
+					
+									}, 1500);
+								}
 							}
 						}
 					}

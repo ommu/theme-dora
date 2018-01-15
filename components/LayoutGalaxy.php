@@ -31,7 +31,10 @@ class LayoutGalaxy extends CWidget
 		$currentModule = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id);
 		$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
 
+		$model=new UserNewsletter;
+
 		$this->render('layout_galaxy',array(
+			'model'=>$model,
 			'module'=>$module,
 			'controller'=>$controller,
 			'action'=>$action,

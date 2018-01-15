@@ -16,13 +16,13 @@
         <h1><?php echo $this->title;?></h1>
         <p class="description"><?php echo $this->desc;?></p>
 		<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
-				'id'=>'contact-form',
-				'action' => Yii::app()->createUrl('dora/feedback'),
-				'enableAjaxValidation'=>true,
-				'htmlOptions' => array(
-					'class' => 'contact-form',
-				),
-			)); ?>
+			'id'=>'contact-form',
+			'action' => Yii::app()->createUrl('dora/feedback'),
+			'enableAjaxValidation'=>true,
+			'htmlOptions' => array(
+				'class' => 'contact-form',
+			),
+		)); ?>
             <div id="success"></div>
             <div class="name field">
 				<?php echo $form->labelEx($model,'displayname'); ?>

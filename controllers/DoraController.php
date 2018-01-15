@@ -88,6 +88,44 @@ class DoraController extends Controller
 		} else
 			$this->redirect(Yii::app()->createUrl('site/index'));
 	}
+	
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionNewsletter($layout='galaxy') 
+	{
+		$model=new UserNewsletter;
+
+		if(isset($_POST['UserNewsletter'])) {
+			$model->attributes=$_POST['UserNewsletter'];
+			$model->scenario = 'singleEmailForm';
+
+			$newsletter = UserNewsletter::model()->findByAttributes(array('email' => strtolower($model->email_i)), array(
+				'select' => 'email',
+			));
+			if($newsletter != null) {
+				echo CJSON::encode(array (
+					'type' => 'newsletter',
+					'layout' => Utility::getUrlTitle($layout),
+				));
+			} else {
+				if(isset($_GET['enablesave']) && $_GET['enablesave'] == 1) {
+					if($model->save()) {
+						echo CJSON::encode(array (
+							'type' => 'newsletter',
+							'layout' => Utility::getUrlTitle($layout),
+						));
+					} else
+						print_r($model->getErrors());
+				}
+			}
+			Yii::app()->end();
+			
+		} else
+			$this->redirect(Yii::app()->createUrl('site/index'));
+	}
 
 	/**
 	 * Performs the AJAX validation.
