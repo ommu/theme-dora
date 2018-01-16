@@ -12,10 +12,14 @@
 class ContentPortfolio extends CWidget
 {
 	public $title;
+	public $article_id;
 
 	public function init() {
 		if(!$this->title)
 			$this->title = Yii::t('phrase', 'Portfolio');
+
+		Yii::import('application.vendor.ommu.article.models.*');
+		Yii::import('application.vendor.ommu.article.models.view.*');
 	}
 
 	public function run() {
@@ -29,8 +33,29 @@ class ContentPortfolio extends CWidget
 		$currentAction = strtolower(Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
 		$currentModule = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id);
 		$currentModuleAction = strtolower(Yii::app()->controller->module->id.'/'.Yii::app()->controller->id.'/'.Yii::app()->controller->action->id);
+		
+		$articleCondition = 0;
+		$model = Articles::model()->findByPk($this->article_id);
+		if($this->article_id && $model != null) {
+			$articleCondition = 1;
+			$article = $model->medias;
+
+		} else {
+			$article = array(
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_1.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_2.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_3.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_4.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_5.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_6.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_8.jpg',
+				Yii::app()->theme->baseUrl.'/images/preview/portfolio_9.jpg',
+			);
+		}
 
 		$this->render('content_portfolio',array(
+			'condition'=>$articleCondition,
+			'article'=>$article,
 			'module'=>$module,
 			'controller'=>$controller,
 			'action'=>$action,

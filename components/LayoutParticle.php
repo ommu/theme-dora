@@ -13,6 +13,7 @@ class LayoutParticle extends CWidget
 {
 	public $construction_date;
 	public $construction_text;
+	public $banner_id;
 
 	public function init() {
 		if(!$this->construction_date)

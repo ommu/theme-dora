@@ -22,14 +22,16 @@ config:
       colorfulimage: Colorfulimage
       particle: Particle
       stars: Stars
+    banner: Banner ID
 
   portfolio:
     label: Portfolio
-    title: Portfolio
     publish: 1
+    title: Portfolio
+    article: Article ID
 
   contact-us:
     label: Contact Us
+    publish: 1
     title: Contact
     desc: You can contact us via email! We are ready to discuss cooperation and to listen to job offers!
-    publish: 1

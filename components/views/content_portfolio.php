@@ -15,114 +15,51 @@
 	<div class="container">
 		<h1><?php echo $this->title;?></h1>
 		<div id="portfolio" class="owl-carousel owl-theme">
-			<div class="portfolio-col">
-				<!-- item 1 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_1.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_1.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
+			<?php 
+			$count = count($article);
+			$variable = 2;
+			$i=0;
+			if($condition) {
+				foreach ($article as $key => $value) {
+					$i++;
+					$article_path = Yii::app()->request->baseUrl.'/public/article/'.$value->article_id;?>
+				<?php if($i == 1 || $i%$variable == 1) {?>
+				<div class="portfolio-col">
+				<?php }?>
+					<div class="portfolio-item">
+						<a class="galleryItem" href="<?php echo $article_path.'/'.$value->media;?>">
+							<div class="portfolio-item-in">
+								<img src="<?php echo $article_path.'/'.$value->media;?>">
+								<div class="overlay"></div>
 							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
+						</a>
+					</div>
+				<?php if($i%$variable == 0 || ($i == $count)) {?>
 				</div>
-				<!-- item 2 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_2.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_2.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
+			<?php 	}
+				}
+			} else {
+				foreach ($article as $key => $value) {
+					$i++;?>
+				<?php if($i == 1 || $i%$variable == 1) {?>
+				<div class="portfolio-col">
+				<?php }?>
+					<div class="portfolio-item">
+						<a class="galleryItem" href="<?php echo $value;?>">
+							<div class="portfolio-item-in">
+								<img src="<?php echo $value;?>">
+								<div class="portfolio-item-info">
+									<h3><?php echo Yii::t('phrase', '{title} Item {i}', array('{title}'=>$this->title, '{i}'=>$i));?></h3>
+								</div>
+								<div class="overlay"></div>
 							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
+						</a>
+					</div>
+				<?php if($i%$variable == 0 || ($i == $count)) {?>
 				</div>
-			</div>
-
-			<div class="portfolio-col">
-				<!-- item 1 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_3.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_3.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
-							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
-				</div>
-				<!-- item 2 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_4.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_4.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
-							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="portfolio-col">
-				<!-- item 1 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_5.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_5.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
-							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
-				</div>
-				<!-- item 2 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_6.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_6.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
-							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="portfolio-col">
-				<!-- item 1 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_8.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_8.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
-							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
-				</div>
-				<!-- item 2 -->
-				<div class="portfolio-item">
-					<a class="galleryItem" href="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_9.jpg">
-						<div class="portfolio-item-in">
-							<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/preview/portfolio_9.jpg">
-							<div class="portfolio-item-info">
-								<h3>Portfolio Item Name</h3>
-							</div>
-							<div class="overlay"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
+			<?php 	}
+				}
+			}?>
 		</div>
 	</div>
 </section>

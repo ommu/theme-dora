@@ -31,7 +31,7 @@
 
 <?php 
 $layout = 'LayoutGalaxy';
-if($condition == 1) {
+if($condition) {
 	if($configTheme['template']['option'] == 'galaxy')
 		$layout = 'LayoutGalaxy';
 	else if($configTheme['template']['option'] == 'island')
@@ -53,11 +53,13 @@ $construction_text = unserialize($setting->construction_text);
 $this->widget($layout, array(
 	'construction_date' => date('j M, Y H:i:s', strtotime($setting->construction_date)),
 	'construction_text' => $construction_text['comingsoon'],
+	'banner_id' => $configTheme['template']['banner'],
 )); //Layout Galaxy ?>
 
 <?php if(!$condition || $configTheme['portfolio']['publish'] == 1) {
 	$this->widget('ContentPortfolio', array(
 		'title' => $configTheme['portfolio']['title'],
+		'article_id' => $configTheme['portfolio']['article'],
 	));
 } //Portfolio ?>
 
