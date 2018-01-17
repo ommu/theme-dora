@@ -13,16 +13,12 @@
 	$this->breadcrumbs=array(
 		'Main',
 	);
-	
-	$this->layout = 'main';
-	$this->pageTitle = Yii::t('phrase', 'Main');
-	$this->pageDescription = '';
 ?>
 
 <section id="demo" class="demos">
 	<div class="container">
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/galaxy');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/galaxy');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/galaxy.png);"></div>
 					<div class="inner">
@@ -32,7 +28,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/island');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/island');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/island.png);"></div>
 					<div class="inner">
@@ -42,7 +38,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/pattern');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/pattern');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/pattern.png);"></div>
 					<div class="inner">
@@ -52,7 +48,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/classic');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/classic');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/classic.png);"></div>
 					<div class="inner">
@@ -62,7 +58,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/image');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/image');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/image.png);"></div>
 					<div class="inner">
@@ -72,7 +68,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/colorfulimage');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/colorfulimage');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/cimage.png);"></div>
 					<div class="inner">
@@ -82,7 +78,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/particle');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/particle');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/particle.png);"></div>
 					<div class="inner">
@@ -92,7 +88,7 @@
 			</a>
 		</div>
 		<div class="col-sm-6">
-			<a href="<?php echo Yii::app()->createUrl('template/stars');?>" target="_blank">
+			<a href="<?php echo Yii::app()->createUrl('doratemplate/stars');?>" target="_blank">
 				<div class="item">
 					<div class="image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/preview/stars.png);"></div>
 					<div class="inner">

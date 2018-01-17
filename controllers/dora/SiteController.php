@@ -1,7 +1,7 @@
 <?php
 /**
- * DoraController
- * @var $this DoraController
+ * SiteController
+ * @var $this SiteController
  * 
  * Reference start
  * TOC :
@@ -15,7 +15,7 @@
  *----------------------------------------------------------------------------------------------------------
  */
 
-class DoraController extends Controller
+class SiteController extends Controller
 {
 	/**
 	 * Initialize public template
@@ -50,7 +50,7 @@ class DoraController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Main | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_index');
+		$this->render('/dora/site/front_index');
 	}
 	
 	/**

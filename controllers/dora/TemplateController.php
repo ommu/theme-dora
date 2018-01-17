@@ -50,7 +50,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Galaxy Template | Dora. - GalaxyComing Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_galaxy');
+		$this->render('/dora/template/front_galaxy');
 	}
 	
 	/**
@@ -61,7 +61,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Island Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_island');
+		$this->render('/dora/template/front_island');
 	}
 	
 	/**
@@ -72,7 +72,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Pattern Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_pattern');
+		$this->render('/dora/template/front_pattern');
 	}
 	
 	/**
@@ -83,7 +83,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Classic Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_classic');
+		$this->render('/dora/template/front_classic');
 	}
 	
 	/**
@@ -94,7 +94,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Image Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_image');
+		$this->render('/dora/template/front_image');
 	}
 	
 	/**
@@ -105,7 +105,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Colorfull Image Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_colorfulimage');
+		$this->render('/dora/template/front_colorfulimage');
 	}
 	
 	/**
@@ -116,7 +116,7 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Particle Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_particle');
+		$this->render('/dora/template/front_particle');
 	}
 	
 	/**
@@ -127,6 +127,6 @@ class TemplateController extends Controller
 		$this->pageTitle = Yii::t('phrase', 'Stars Template | Dora. - Coming Soon Page Template');
 		$this->pageDescription = '';
 		$this->pageMeta = '';
-		$this->render('front_stars');
+		$this->render('/dora/template/front_stars');
 	}
 }
