@@ -20,7 +20,6 @@
 
 	$condition = 0;
 	$model = OmmuThemes::model()->findByAttributes(array(
-		'group_page'=>'maintenance',
 		'default_theme'=>1,
 		'folder'=>Yii::app()->theme->name,
 	));
