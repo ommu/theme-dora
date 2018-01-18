@@ -22,7 +22,6 @@
 		'folder'=>Yii::app()->theme->name,
 	));
 	$configTheme = unserialize($model->config);
-	print_r($configTheme);
 	if($model != null && is_array($configTheme) && !empty($configTheme))
 		$condition = 1;
 ?>
