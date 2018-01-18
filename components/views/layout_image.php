@@ -15,7 +15,7 @@
 ?>
 
 <section class="bg-page section">
-	<div class="overlay"></div>
+	<div class="overlay" style="background-image: url(<?php echo $banner_source;?>);"></div>
 	<div class="logo">
 		<a href="#"><img src="<?php echo Yii::app()->theme->baseUrl;?>/images/logo.png" alt="Dora"></a>
 	</div>

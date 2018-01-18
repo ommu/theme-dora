@@ -1,6 +1,6 @@
 <?php
 /**
- * @var $this MaintenanceController
+ * @var $this SiteController
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
@@ -8,12 +8,12 @@
  * @link https://github.com/ommu/ommu
  *
  */
- 
+
 	$this->breadcrumbs=array(
-		'Maintenance',
+		'Main',
 	);
 
-	$this->pageTitle = Yii::t('phrase', 'Maintenance');
+	$this->pageTitle = Yii::t('phrase', 'Main');
 	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
 
 	$condition = 0;
@@ -22,6 +22,7 @@
 		'folder'=>Yii::app()->theme->name,
 	));
 	$configTheme = unserialize($model->config);
+	print_r($configTheme);
 	if($model != null && is_array($configTheme) && !empty($configTheme))
 		$condition = 1;
 ?>
@@ -49,7 +50,7 @@ if($condition) {
 $construction_text = unserialize($setting->construction_text);
 $this->widget($layout, array(
 	'construction_date' => date('j M, Y H:i:s', strtotime($setting->construction_date)),
-	'construction_text' => $construction_text['maintenance'],
+	'construction_text' => $construction_text['comingsoon'],
 	'banner_id' => $configTheme['template']['banner'],
 )); //Layout Galaxy ?>
 
