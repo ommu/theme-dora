@@ -131,7 +131,7 @@
 		</div>
 	</section>
 
-	<?php $this->widget('FrontGoogleAnalytics'); ?>
+	<?php $this->widget('ComGoogleAnalytics'); ?>
 
  </body>
 </html>
