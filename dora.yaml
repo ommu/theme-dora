@@ -11,6 +11,10 @@ author:
   homepage: https://sudaryanto.id
 
 config:
+  ga:
+    label: Google Analytic Rules
+    rules: 
+
   template:
     label: Template
     option:
@@ -23,15 +27,16 @@ config:
       particle: Particle
       stars: Stars
     banner: Banner ID
+    color: Color" linear-gradient(180deg,#F3904F,#3B4371) or (#274bd3)"
 
   portfolio:
     label: Portfolio
     publish: 1
-    title: Portfolio
+    title: Title "Portfolio"
     article: Article ID
 
   contact-us:
     label: Contact Us
     publish: 1
-    title: Contact
-    desc: You can contact us via email! We are ready to discuss cooperation and to listen to job offers!
+    title: Title "Contact"
+    desc: Description "You can contact us via email! We are ready to discuss cooperation and to listen to job offers!"

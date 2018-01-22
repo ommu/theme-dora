@@ -15,7 +15,7 @@
 	$cs->registerScriptFile(Yii::app()->theme->baseUrl.'/js/custom/stars.js', CClientScript::POS_END);
 ?>
 
-<section class="bg-page section">
+<section class="bg-page section" style="background-color: <?php echo $this->color;?>;">
 	<div class="overlay" id="particles-js"></div>
 	<div class="logo">
 		<a href="#"><img src="<?php echo Yii::app()->theme->baseUrl;?>/images/logo.png" alt="Dora"></a>

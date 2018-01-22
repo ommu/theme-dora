@@ -51,6 +51,7 @@ $this->widget($layout, array(
 	'construction_date' => date('j M, Y H:i:s', strtotime($setting->construction_date)),
 	'construction_text' => $construction_text['comingsoon'],
 	'banner_id' => $configTheme['template']['banner'],
+	'color' => $configTheme['template']['color'],
 )); //Layout Galaxy ?>
 
 <?php if(!$condition || $configTheme['portfolio']['publish'] == 1) {

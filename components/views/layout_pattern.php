@@ -14,7 +14,7 @@
 	$cs->registerScriptFile(Yii::app()->theme->baseUrl.'/js/custom/pattern.js', CClientScript::POS_END);
 ?>
 
-<section class="bg-page section">
+<section class="bg-page section" style="background-color: <?php echo $this->color;?>;">
 	<div class="overlay"></div>
 	<div class="logo">
 		<a href="#"><img src="<?php echo Yii::app()->theme->baseUrl;?>/images/logo.png" alt="Dora"></a>

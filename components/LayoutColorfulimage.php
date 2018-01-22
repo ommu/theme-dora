@@ -14,10 +14,15 @@ class LayoutColorfulimage extends CWidget
 	public $construction_date;
 	public $construction_text;
 	public $banner_id;
+	public $color;
 
 	public function init() {
 		if(!$this->construction_date)
 			$this->construction_date = '15 Sep, 2018 12:00:00';
+		if(!$this->construction_text)
+			$this->construction_text = 'We are working hard on our new site. Follow the news updates and you\'ll be the first to know when it\'s ready.';
+		if(!$this->color)
+			$this->color = 'linear-gradient(180deg,#F3904F,#3B4371)';
 
 		Yii::import('application.vendor.ommu.banner.models.*');
 		Yii::import('application.vendor.ommu.banner.models.view.*');
