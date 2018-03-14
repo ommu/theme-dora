@@ -14,12 +14,12 @@
 	);
 
 	$this->pageTitle = Yii::t('phrase', 'Main');
-	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
+	Yii::import('webroot.themes.dora.components.*');
 
 	$condition = 0;
 	$model = OmmuThemes::model()->findByAttributes(array(
 		'default_theme'=>1,
-		'folder'=>Yii::app()->theme->name,
+		'folder'=>'dora',
 	));
 	$configTheme = unserialize($model->config);
 	if($model != null && is_array($configTheme) && !empty($configTheme))

@@ -32,7 +32,7 @@
 			<p><?php echo $this->construction_text;?></p>
 			<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
 				'id'=>'notify-area',
-				'action' => Yii::app()->createUrl('dora/newsletter', array('layout'=>'galaxy')),
+				'action' => Yii::app()->createUrl('dorasite/newsletter', array('layout'=>'galaxy')),
 				'enableAjaxValidation'=>true,
 				'htmlOptions' => array(
 					'class' => 'notify-area',

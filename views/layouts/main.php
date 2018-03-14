@@ -7,7 +7,7 @@
  *
  */
 
-	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
+	Yii::import('webroot.themes.dora.components.*');
 	$module = strtolower(Yii::app()->controller->module->id);
 	$controller = strtolower(Yii::app()->controller->id);
 	$action = strtolower(Yii::app()->controller->action->id);

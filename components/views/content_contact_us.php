@@ -17,7 +17,7 @@
         <p class="description"><?php echo $this->desc;?></p>
 		<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
 			'id'=>'contact-form',
-			'action' => Yii::app()->createUrl('dora/feedback'),
+			'action' => Yii::app()->createUrl('dorasite/feedback'),
 			'enableAjaxValidation'=>true,
 			'htmlOptions' => array(
 				'class' => 'contact-form',

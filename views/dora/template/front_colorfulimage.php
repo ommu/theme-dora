@@ -13,7 +13,7 @@
 	$this->breadcrumbs=array(
 		'Main',
 	);
-	Yii::import('webroot.themes.'.Yii::app()->theme->name.'.components.*');
+	Yii::import('webroot.themes.dora.components.*');
 ?>
 
 <?php $this->widget('LayoutColorfulimage'); //Layout olorfulimage ?>
