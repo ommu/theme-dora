@@ -54,14 +54,14 @@ $this->widget($layout, array(
 	'color' => $configTheme['template']['color'],
 )); //Layout Galaxy ?>
 
-<?php if(!$condition || $configTheme['portfolio']['publish'] == 1) {
+<?php if(!$condition || in_array($configTheme['portfolio']['publish'], array('', 1))) {
 	$this->widget('ContentPortfolio', array(
 		'title' => $configTheme['portfolio']['title'],
 		'article_id' => $configTheme['portfolio']['article'],
 	));
 } //Portfolio ?>
 
-<?php if(!$condition || $configTheme['contact-us']['publish'] == 1) {
+<?php if(!$condition || in_array($configTheme['contact-us']['publish'], array('', 1))) {
 	$this->widget('ContentContactUs', array(
 		'title' => $configTheme['contact-us']['title'],
 		'desc' => $configTheme['contact-us']['desc'],
