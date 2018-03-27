@@ -36,9 +36,9 @@
             </div>
             <div class="clearfix"></div>
             <div class="message field">
-				<?php echo $form->labelEx($model,'subject'); ?>
-				<?php echo $form->textField($model,'subject',array('maxlength'=>64)); ?>
-				<?php echo $form->error($model,'subject'); ?>
+				<?php echo $form->labelEx($model,'subject_i'); ?>
+				<?php echo $form->textField($model,'subject_i',array('maxlength'=>64)); ?>
+				<?php echo $form->error($model,'subject_i'); ?>
             </div>
             <div class="message field">
 				<?php echo $form->labelEx($model,'message'); ?>
