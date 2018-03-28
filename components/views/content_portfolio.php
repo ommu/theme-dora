@@ -27,9 +27,9 @@
 				<div class="portfolio-col">
 				<?php }?>
 					<div class="portfolio-item">
-						<a class="galleryItem" href="<?php echo $article_path.'/'.$value->media;?>">
+						<a class="galleryItem" href="<?php echo $article_path.'/'.$value->cover_filename;?>">
 							<div class="portfolio-item-in">
-								<img src="<?php echo $article_path.'/'.$value->media;?>">
+								<img src="<?php echo $article_path.'/'.$value->cover_filename;?>">
 								<div class="overlay"></div>
 							</div>
 						</a>

@@ -18,8 +18,11 @@ class ContentPortfolio extends CWidget
 		if(!$this->title)
 			$this->title = Yii::t('phrase', 'Portfolio');
 
-		Yii::import('application.vendor.ommu.article.models.*');
-		Yii::import('application.vendor.ommu.article.models.view.*');
+		$moduleVendorPath = Yii::getPathOfAlias('application.vendor.ommu.article.models');
+		if(!file_exists($moduleVendorPath))
+			Yii::import('application.vendor.ommu.article.models.*');
+			
+		Yii::import('application.modules.article.models.*');
 	}
 
 	public function run() {
