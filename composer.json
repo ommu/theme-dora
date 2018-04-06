@@ -8,20 +8,19 @@
 		"coming soon",
 		"maintenance",
 		"ommu",
-		"platform",
 		"ommu platform"
 	],
-	"homepage": "https://github.com/OmmuThemes/dora",
+	"homepage": "https://github.com/ommu/theme-dora",
 	"type": "ommu-theme",
 	"license": "Apache-2.0",
 	"support": {
-		"issues": "https://github.com/OmmuThemes/dora/issues",
-		"wiki": "https://github.com/OmmuThemes/dora/wiki",
-		"source": "https://github.com/OmmuThemes/dora"
+		"issues": "https://github.com/ommu/theme-dora/issues",
+		"wiki": "https://github.com/ommu/theme-dora/wiki",
+		"source": "https://github.com/ommu/theme-dora"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/OmmuThemes/dora.git"
+		"url": "https://github.com/ommu/theme-dora.git"
 	},
 	"authors": [
 		{
