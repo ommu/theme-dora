@@ -4,8 +4,8 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (opensource.ommu.co)
- * @link https://github.com/OmmuThemes/dora
+ * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @link https://github.com/ommu/theme-dora
  *
  */
 
@@ -38,7 +38,7 @@ class ContentContactUs extends CWidget
 
 		$model=new SupportFeedbacks;
 
-		$this->render('content_contact_us',array(
+		$this->render('content_contact_us', array(
 			'model'=>$model,
 			'module'=>$module,
 			'controller'=>$controller,

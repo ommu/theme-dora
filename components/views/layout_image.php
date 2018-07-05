@@ -4,8 +4,8 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (opensource.ommu.co)
- * @link https://github.com/OmmuThemes/dora
+ * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @link https://github.com/ommu/theme-dora
  *
  */
 
@@ -35,7 +35,7 @@
 					'class' => 'notify-area',
 				),
 			)); ?>
-				<?php echo $form->textField($model,'email_i',array('maxlength'=>32, 'id'=>'email', 'placeholder'=>'E-mail')); ?>
+				<?php echo $form->textField($model,'email_i', array('maxlength'=>32, 'id'=>'email', 'placeholder'=>'E-mail')); ?>
 				<?php echo CHtml::tag('button', array('data-title'=>'Notify Me', 'class'=>'notify ripplelink', 'onclick' => 'setEnableSave()'), Yii::t('phrase', 'Notify Me')); ?>
 			<?php $this->endWidget(); ?>
 		</div>

@@ -2,8 +2,8 @@
 /**
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (opensource.ommu.co)
- * @link https://github.com/OmmuThemes/dora
+ * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @link https://github.com/ommu/theme-dora
  *
  */
 
@@ -19,7 +19,7 @@
 	 * = Global condition
 	 ** Construction condition
 	 */
-	$setting = OmmuSettings::model()->findByPk(1,array(
+	$setting = OmmuSettings::model()->findByPk(1, array(
 		'select' => 'site_oauth, site_title',
 	));
 
@@ -40,7 +40,7 @@
 	$keywords = $this->pageMeta;
 	$urlAddress = Utility::getProtocol().'://'.Yii::app()->request->serverName.Yii::app()->request->requestUri;
 
-	if(Yii::app()->request->isAjaxRequest && !isset($_GET['ajax'])) {
+	if(Yii::app()->request->isAjaxRequest && !Yii::app()->getRequest()->getParam('ajax')) {
 		/* if(Yii::app()->session['theme_active'] != Yii::app()->theme->name) {
 			$return = array(
 				'redirect' => $urlAddress,
@@ -102,7 +102,7 @@
 		<div class="navbar">
 			<div class="logo" style="background-image: url(<?php echo Yii::app()->theme->baseUrl;?>/images/logo.png);"></div>
 			<ul class="right">
-				<li><a href="https://github.com/OmmuThemes/dora" target="_blank" class="btn"> GitHub </a></li>
+				<li><a href="https://github.com/ommu/theme-dora" target="_blank" class="btn"> GitHub </a></li>
 			</ul>
 		</div>
 		<div class="box">

@@ -9,8 +9,8 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (opensource.ommu.co)
- * @link https://github.com/OmmuThemes/dora
+ * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @link https://github.com/ommu/theme-dora
  *
  *----------------------------------------------------------------------------------------------------------
  */
@@ -73,7 +73,7 @@ class SiteController extends Controller
 				echo $jsonError;
 				
 			} else {
-				if(isset($_GET['enablesave']) && $_GET['enablesave'] == 1) {
+				if(Yii::app()->getRequest()->getParam('enablesave') == 1) {
 					if($model->save()) {
 						echo CJSON::encode(array (
 							'type' => 'contact',
@@ -111,7 +111,7 @@ class SiteController extends Controller
 					'layout' => Utility::getUrlTitle($layout),
 				));
 			} else {
-				if(isset($_GET['enablesave']) && $_GET['enablesave'] == 1) {
+				if(Yii::app()->getRequest()->getParam('enablesave') == 1) {
 					if($model->save()) {
 						echo CJSON::encode(array (
 							'type' => 'newsletter',

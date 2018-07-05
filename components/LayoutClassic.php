@@ -4,8 +4,8 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (opensource.ommu.co)
- * @link https://github.com/OmmuThemes/dora
+ * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @link https://github.com/ommu/theme-dora
  *
  */
 
@@ -39,7 +39,7 @@ class LayoutClassic extends CWidget
 
 		$model=new UserNewsletter;
 
-		$this->render('layout_classic',array(
+		$this->render('layout_classic', array(
 			'model'=>$model,
 			'module'=>$module,
 			'controller'=>$controller,

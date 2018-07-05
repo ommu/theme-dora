@@ -4,8 +4,8 @@
  *
  * @author Putra Sudaryanto <putra@sudaryanto.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (opensource.ommu.co)
- * @link https://github.com/OmmuThemes/dora
+ * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @link https://github.com/ommu/theme-dora
  *
  */
 
@@ -51,7 +51,7 @@ class LayoutImage extends CWidget
 
 		$model=new UserNewsletter;
 
-		$this->render('layout_image',array(
+		$this->render('layout_image', array(
 			'banner_source'=>$banner_source,
 			'model'=>$model,
 			'module'=>$module,
