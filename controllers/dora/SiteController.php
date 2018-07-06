@@ -24,7 +24,7 @@ class SiteController extends Controller
 	{
 		Yii::app()->theme = 'dora';
 		$this->layout = 'main';
-		Utility::applyViewPath(__dir__, false);
+		$this->applyViewPath(__dir__, false);
 	}
 
 	/**
@@ -108,14 +108,14 @@ class SiteController extends Controller
 			if($newsletter != null) {
 				echo CJSON::encode(array (
 					'type' => 'newsletter',
-					'layout' => Utility::getUrlTitle($layout),
+					'layout' => $this->urlTitle($layout),
 				));
 			} else {
 				if(Yii::app()->getRequest()->getParam('enablesave') == 1) {
 					if($model->save()) {
 						echo CJSON::encode(array (
 							'type' => 'newsletter',
-							'layout' => Utility::getUrlTitle($layout),
+							'layout' => $this->urlTitle($layout),
 						));
 					} else
 						print_r($model->getErrors());

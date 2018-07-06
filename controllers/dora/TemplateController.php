@@ -24,7 +24,7 @@ class TemplateController extends Controller
 	{
 		Yii::app()->theme = 'dora';
 		$this->layout = 'front_default';
-		Utility::applyViewPath(__dir__, false);
+		$this->applyViewPath(__dir__, false);
 	}
 
 	/**
