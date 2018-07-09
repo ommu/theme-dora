@@ -27,7 +27,7 @@
 			<div class="timer">
 				<h1 id="timer"></h1></div>
 			<p><?php echo $this->construction_text;?></p>
-			<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
+			<?php $form=$this->beginWidget('application.libraries.yii-traits.system.OActiveForm', array(
 				'id'=>'notify-area',
 				'action' => Yii::app()->createUrl('dorasite/newsletter', array('layout'=>'colorfulimage')),
 				'enableAjaxValidation'=>true,

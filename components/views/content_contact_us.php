@@ -15,7 +15,7 @@
     <div class="container">
         <h1><?php echo $this->title;?></h1>
         <p class="description"><?php echo $this->desc;?></p>
-		<?php $form=$this->beginWidget('application.libraries.core.components.system.OActiveForm', array(
+		<?php $form=$this->beginWidget('application.libraries.yii-traits.system.OActiveForm', array(
 			'id'=>'contact-form',
 			'action' => Yii::app()->createUrl('dorasite/feedback'),
 			'enableAjaxValidation'=>true,
