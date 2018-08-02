@@ -24,8 +24,10 @@ class LayoutImage extends CWidget
 		if(!$this->color)
 			$this->color = '#274bd3';
 
-		Yii::import('application.vendor.ommu.banner.models.*');
-		Yii::import('application.vendor.ommu.banner.models.view.*');
+		$moduleVendorPath = Yii::getPathOfAlias('ommu.banner');
+		if(file_exists($moduleVendorPath))
+			Yii::import('ommu.banner.models.*');
+		Yii::import('application.modules.banner.models.*');
 	}
 
 	public function run() {

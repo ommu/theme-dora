@@ -24,8 +24,10 @@ class LayoutColorfulimage extends CWidget
 		if(!$this->color)
 			$this->color = 'linear-gradient(180deg,#F3904F,#3B4371)';
 
-		Yii::import('application.vendor.ommu.banner.models.*');
-		Yii::import('application.vendor.ommu.banner.models.view.*');
+		$moduleVendorPath = Yii::getPathOfAlias('ommu.banner');
+		if(file_exists($moduleVendorPath))
+			Yii::import('ommu.banner.models.*');
+		Yii::import('application.modules.banner.models.*');
 	}
 
 	public function run() {
