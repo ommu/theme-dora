@@ -1,33 +1,35 @@
 {
 	"name": "ommu/dora",
 	"description": "Dora - Coming Soon Template",
+	"type": "ommu-theme",
 	"keywords": [
 		"theme",
-		"frontend",
+		"dora",
+		"front-template",
+		"bootstrap3",
 		"onepage",
-		"coming soon",
+		"coming-soon",
 		"maintenance",
 		"ommu",
-		"platform",
-		"ommu platform"
+		"ommu-platform",
+		"yii2"
 	],
-	"homepage": "https://github.com/OmmuThemes/dora",
-	"type": "ommu-theme",
 	"license": "Apache-2.0",
+	"homepage": "https://github.com/ommu/theme-dora",
 	"support": {
-		"issues": "https://github.com/OmmuThemes/dora/issues",
-		"wiki": "https://github.com/OmmuThemes/dora/wiki",
-		"source": "https://github.com/OmmuThemes/dora"
+		"issues": "https://github.com/ommu/theme-dora/issues",
+		"wiki": "https://github.com/ommu/theme-dora/wiki",
+		"source": "https://github.com/ommu/theme-dora"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/OmmuThemes/dora.git"
+		"url": "https://github.com/ommu/theme-dora.git"
 	},
 	"authors": [
 		{
 			"name": "Putra Sudaryanto",
-			"email": "putra@sudaryanto.id",
-			"homepage": "https://putra.sudaryanto.id",
+			"email": "putra@ommu.id",
+			"homepage": "https://ommu.id",
 			"role": "Developer"
 		},
 		{
@@ -37,8 +39,8 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.2",
-		"oomphinc/composer-installers-extender": "^1.0",
-		"yiisoft/yii": "1.1.*"
+		"php": "~7.0",
+        "composer/installers": "~1.0",
+		"yiisoft/yii2": "~2.0.14"
 	}
 }
