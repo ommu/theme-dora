@@ -5,10 +5,9 @@
 		"theme",
 		"frontend",
 		"onepage",
-		"coming soon",
+		"coming-soon",
 		"maintenance",
-		"ommu",
-		"ommu-platform"
+		"ommu"
 	],
 	"homepage": "https://github.com/ommu/theme-dora",
 	"type": "ommu-theme",
@@ -25,8 +24,8 @@
 	"authors": [
 		{
 			"name": "Putra Sudaryanto",
-			"email": "putra@ommu.co",
-			"homepage": "https://ommu.co",
+			"email": "putra@ommu.id",
+			"homepage": "https://ommu.id",
 			"role": "Developer"
 		},
 		{
