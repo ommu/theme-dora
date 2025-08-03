@@ -1,8 +1,8 @@
 <?php
 /**
- * @author Putra Sudaryanto <putra@sudaryanto.id>
- * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2018 Ommu Platform (www.ommu.co)
+ * @author Putra Sudaryanto <putra@ommu.id>
+ * @contact (+62)811-2540-432
+ * @copyright Copyright (c) 2018 OMMU (www.ommu.id)
  * @link https://github.com/ommu/theme-dora
  *
  */
@@ -94,7 +94,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="msapplication-tap-highlight" content="no"/>
 	<meta name="format-detection" content="telephone=no"/>
-	<meta name="author" content="Ommu Platform (support@ommu.co)" />
+	<meta name="author" content="OMMU (support@ommu.id)" />
 	<link rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl;?>/favicon.ico" />
  </head>
  <body>
@@ -124,7 +124,7 @@
 			<div class="col-sm-12">
 				<a href="https://github.com/ommu" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl;?>/images/devob.png" alt="devob creative agency"></a>
 				<ul class="right">
-					<li><a href="mailto:putra@sudaryanto.id">Mail Us</a></li>
+					<li><a href="mailto:putra@ommu.id">Mail Us</a></li>
 					<li><a href="https://github.com/OmmuThemes" target="_blank">Our Themes</a></li>
 				</ul>
 			</div>
